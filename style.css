@@ -6,17 +6,29 @@ position: static;
 }
 nav ul{
     display: flex;
-    gap: 150px;
+    gap: 2rem;
     list-style: none;
     align-items: center;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
 }
 nav a{
     color: white;
     text-decoration: none;
     font-size: 20px;
+
 }
+nav{
+    overflow-x: auto;
+  padding: 0 1.5rem;
+}
+
+
+
+
+
+
 body {
     background-color: #f8eedf;
     margin: 0;
@@ -33,42 +45,46 @@ img {
     display: block;
 }
 
-.box1 {
-    height: 160px;
-    width: 600px;
-    margin: 20px  auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
-}
-.box2{
-   width:500px ;
-   height:500px ;
-   text-align: center;
-   margin: auto;
-   padding: 40px;
-   
-  
-}
-footer{
-   background-color:#8e1616;
-   height: 200px;
-   margin-top: 30%;
-}
-.box00{
-  display: flex;         
-  gap: 20px;               
-  align-items: flex-start; 
-  justify-content: flex-start;
+ .box1 {
+  width: 100%;
+  height: 25vw;      
+  min-height: 150px; 
+  max-height: 300px; 
+  position: relative;
+  margin: 0;
+  overflow: hidden;
 }
 
-.box3 {
-  width: 400px;
-  height: 170px;
-  padding: 20px;         
  
+
+
+
+ .box2 {
+  width: 100%;
+  margin: 0;
+  padding: 2.5rem 1rem;
+  background-color: #f8eedf;
+  text-align: center;
 }
+
+.box2 p {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+
+
+
+
+         
+ 
+
+
+
+
+
 
 h2{
    color:#ebc999; 
@@ -85,11 +101,7 @@ h3{
   border: 1px solid #ebc999; 
   
 }
-.box1 {
-    position: relative;  
-    height: 160px;
-    width: 600px;
-}
+ 
 
 .bg-img {
     width: 100%;
@@ -106,87 +118,102 @@ h3{
     color: #ebc999;
     text-align: center;
     z-index: 2; 
+
 }
+
+
+.haha h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem); 
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.haha p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
 .logo img {
     width: 50px;   
     height: auto;  
 }
 
-
-@media (max-width: 1024px) {
-    nav ul {
-        gap: 50px; /* smaller gap for tablets/laptops */
-    }
-
-    .box1 {
-        width: 90%;  /* fit screen */
-        height: auto; /* adjust height */
-    }
-
-    .box2 {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-    }
-
-    .box3 {
-        width: 90%;
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-flex-direction: column; 
- gap: 10px;
-align-items: flex-start;
-    }
-
-    .box1 {
-        height: 200px;
-    }
-
-    .haha h1 {
-        font-size: 1.5rem;
-    }
-
-    .haha p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    nav a {
- font-size: 16px;
- }
-
-.logo img {
- width: 40px;
-}
-
-.box1 {
- height: 150px;
-}
-
-.haha h1 {
- font-size: 1.2rem;
-}
-
-.box2 {
- padding: 15px;
-font-size: 0.9rem;
-}
 footer {
- text-align: center;
-}
-.box00 {
-flex-direction: column;
- gap: 10px;
-align-items: center;
+  background-color: #8e1616;
+  padding: 2rem 1rem;   
 }
 
-.box3 {   width: 90%;
-  height: auto;
- }
+.box00 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-  
+
+.box3 {
+  flex: 1 1 250px;       
+  max-width: 350px;
+  min-width: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.95rem;
+  color: #ebc999;
+  background-color: #8e1616;
+  border: 1px solid #ebc999;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  width: 100%;
+  max-width: 150px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  background-color: #ebc999;
+  color: #8e1616;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #d1a85a;
+}
+
+@media (max-width: 600px) {
+  .box00 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box3 {
+    max-width: 90%;
+  }
+
+  .contact-form button {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
