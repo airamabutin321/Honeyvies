@@ -23,6 +23,23 @@ nav{
     overflow-x: auto;
   padding: 0 1.5rem;
 }
+nav ul li a {
+  font-family: 'Zen Dots', cursive;
+  text-decoration: none;
+}
+
+.movies a {
+  color: #8e1616;
+}
+
+
+.home a,
+.top-pick a {
+  color: #e8c999;
+}
+
+
+
 
 
 
