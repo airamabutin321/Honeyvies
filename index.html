@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>website</title>
     <link rel="icon" type="image/jpg" href="favicon.jpg">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="page1">
       <header>
         <nav>
 
@@ -53,7 +54,7 @@ So, take a look around, discover something new, and when youâ€™ve watched it, Iâ
     Email: honeyvies56@gmail.com</p>
     </div>
     <div class="box3">
-  <form class="contact-form">
+  <form class="contact-form" onsubmit="sendMessage()">
     <label for="message">Your Message:</label><br>
     <textarea id="message" name="message" rows="5" placeholder="Type your message..."></textarea><br>
     <button type="submit">Send</button>
@@ -62,6 +63,6 @@ So, take a look around, discover something new, and when youâ€™ve watched it, Iâ
 
     </div>
 </footer>
-
+<script src="script.js"></script>
 </body>
   </html>
